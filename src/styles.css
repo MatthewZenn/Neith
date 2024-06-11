@@ -13,7 +13,7 @@
   position: absolute;
   top: 35px;
   right: 0;
-  bottom: 0;
+  bottom: 25px;
   left: 0;
   font-size: 12pt;
 }
@@ -40,13 +40,18 @@
   position: relative;
   align-items: center;
   float: right;
-  width: 35px;
+  width: 50px;
   height: 35px;
   border: none;
   background-color: transparent;
   font-family: SegoeIcons;
   font-weight: lighter;
   font-size: 10pt;
+}
+
+#titlebar-close:hover {
+  background-color: rgb(255, 50, 50);
+  color: white;
 }
 
 .nav-btns {
@@ -67,6 +72,6 @@
   left: 0;
   right: 0;
   display: inline-flex;
-  height: 30px;
+  height: 25px;
   z-index: 99;
 }

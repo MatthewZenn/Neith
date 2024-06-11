@@ -3,6 +3,7 @@
   --ui-sec-background: #282c34;
   --ui-hover: #393e49;
   --ui-text: white;
+  --ui-sec-text: #abb2bf;
   --ui-accent: #528bff;
   --editor-text: white;
   --secondary-text: #6a6f7a;
@@ -28,7 +29,7 @@
 }
 
 .titlebar-button {
-  color: var(--ui-text)
+  color: var(--ui-sec-text)
 }
 
 .titlebar-button:hover {
@@ -36,7 +37,7 @@
 }
 
 .nav-btns {
-  color: var(--ui-text);
+  color: var(--ui-sec-text);
 }
 
 .nav-btns:hover {
