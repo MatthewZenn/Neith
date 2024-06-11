@@ -1,0 +1,204 @@
+:root {
+  --ui-background: #2e333b;
+  --ui-sec-background: #282c34;
+  --ui-hover: #393e49;
+  --ui-text: white;
+  --ui-accent: #528bff;
+  --editor-text: white;
+  --secondary-text: #6a6f7a;
+  --inactive-text: #abb2bf;
+  --numeric: #d19a66;
+  --variable: #e06c75;
+  --function: #61afef;
+  --type: #e5c07b;
+  --operator: #c678dd;
+  --string: #98c379;
+  --constant-charcter: #56b6c2;
+  --active-line: rgba(76, 87, 103, .19);
+  --comment: #5c6370;
+  --bracket-marker: #747369;
+  --step-marker: #c6dbae;
+  --cursor: #528bff;
+  --selection: rgba(49, 155, 255, 0.5);
+  --selected-border: #3d4350;
+}
+
+.titlebar {
+  background-color: var(--ui-background);
+}
+
+.titlebar-button {
+  color: var(--ui-text)
+}
+
+.titlebar-button:hover {
+  background: var(--ui-hover);
+}
+
+.nav-btns {
+  color: var(--ui-text);
+}
+
+.nav-btns:hover {
+  background-color: var(--ui-hover);
+}
+
+.statusbar {
+  background-color: var(--ui-background);
+}
+
+#editor .ace_gutter {
+  background: var(--ui-sec-background);
+  color: var(--secondary-text);
+}
+
+#editor .ace_print-margin {
+  display: none;
+}
+
+#editor {
+  background-color: var(--ui-sec-background);
+  color: var(--inactive-text);
+}
+
+#editor .ace_cursor {
+  color: var(--cursor)
+}
+
+#editor .ace_marker-layer .ace_selection {
+  background: var(--selection);
+}
+
+#editor .ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0 var(--ui-sec-background);
+  border-radius: 2px;
+}
+
+#editor .ace_marker-layer .ace_step {
+  background: var(--step-marker);
+}
+
+#editor .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid var(--bracket-marker);
+}
+
+#editor .ace_marker-layer .ace_active-line {
+  background: var(--active-line);
+}
+
+#editor .ace_gutter-active-line {
+  background-color: var(--active-line);
+}
+
+#editor .ace_marker-layer .ace_selected-word {
+  border: 1px solid var(--selected-border);
+}
+
+#editor .ace_fold {
+  background-color: var(--function);
+  border-color: var(--inactive-text);
+}
+
+#editor .ace_keyword {
+  color: var(--operator);
+}
+
+#editor .ace_keyword.ace_operator {
+  color: var(--operator);
+}
+
+#editor .ace_keyword.ace_other.ace_unit {
+  color: var(--numeric);
+}
+
+#editor .ace_constant.ace_language {
+  color: var(--numeric);
+}
+
+#editor .ace_constant.ace_numeric {
+  color: var(--numeric);
+}
+
+#editor .ace_constant.ace_character {
+  color: var(--constant-charcter);
+}
+
+#editor .ace_constant.ace_other {
+  color: var(--constant-charcter);
+}
+
+#editor .ace_support.ace_function {
+  color: var(--function);
+}
+
+#editor .ace_support.ace_constant {
+  color: var(--numeric);
+}
+
+#editor .ace_support.ace_class {
+  color: var(--type);
+}
+
+#editor .ace_support.ace_type {
+  color: var(--type);
+}
+
+#editor .ace_storage {
+  color: var(--operator);
+}
+
+#editor .ace_storage.ace_type {
+  color: var(--operator);
+}
+
+#editor .ace_invalid {
+  color: var(--editor-text);
+  text-decoration: line-through;
+}
+
+#editor .ace_invalid.ace_deprecated {
+  color: var(--editor-text);
+  text-decoration: line-through;
+}
+
+#editor .ace_string {
+  color: var(--string);
+}
+
+#editor .ace_string.ace_regexp {
+  color: var(--variable);
+}
+
+#editor .ace_comment {
+  font-style: italic;
+  color: var(--comment);
+}
+
+#editor .ace_variable {
+  color: var(--variable);
+}
+
+#editor .ace_variable.ace_parameter {
+  color: var(--numeric);
+}
+
+#editor .ace_meta.ace_tag {
+  color: var(--variable);
+}
+
+#editor .ace_entity.ace_other.ace_attribute-name {
+  color: var(--variable);
+}
+
+#editor .ace_entity.ace_name.ace_function {
+  color: var(--function);
+}
+
+#editor .ace_entity.ace_name.ace_tag {
+  color: var(--variable);
+}
+
+#editor .ace_markup.ace_heading {
+  color: var(--string);
+}

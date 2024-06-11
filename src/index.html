@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Themes/one_dark.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neith</title>
+  </head>
+  <body>
+    <header data-tauri-drag-region class="titlebar">
+      <img class="logo">
+      <button class="nav-btns" id="file">File</button>
+      <button class="nav-btns" id="edit">Edit</button>
+      <button class="nav-btns" id="view">View</button>
+      <button class="nav-btns" id="term">Terminal</button>
+      <button class="titlebar-button" id="titlebar-close">&#xE8BB;</button>
+      <button class="titlebar-button" id="titlebar-maximize">&#xE923;</button>
+      <button class="titlebar-button" id="titlebar-minimize">&#xE921;</button>
+    </header>
+    <div id="editor">
+    </div>
+  </body>
+  <footer class="statusbar"></footer>
+  <script src="/ace-builds/src/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script type="module" src="/main.js" defer></script>
+</html>
