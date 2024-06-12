@@ -12,3 +12,4 @@ The web dev editor of the future.
 - [ ] Git support
 - [ ] Tab manager
 - [ ] Settings menu
+- [ ] Live server
