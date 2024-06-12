@@ -17,11 +17,15 @@
   --constant-charcter: #56b6c2;
   --active-line: rgba(76, 87, 103, .19);
   --comment: #5c6370;
-  --bracket-marker: #747369;
+  --bracket-marker: #ffa861;
   --step-marker: #c6dbae;
   --cursor: #528bff;
   --selection: rgba(49, 155, 255, 0.5);
   --selected-border: #3d4350;
+}
+
+body, html {
+  background-color: var(--ui-sec-background);
 }
 
 .titlebar {
@@ -46,6 +50,15 @@
 
 .statusbar {
   background-color: var(--ui-background);
+}
+
+.sts-btn {
+  color: var(--ui-text);
+  background-color: transparent;
+}
+
+#remote {
+  background-color: var(--ui-accent);
 }
 
 #editor .ace_gutter {

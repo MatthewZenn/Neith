@@ -9,7 +9,7 @@
   </head>
   <body>
     <header data-tauri-drag-region class="titlebar">
-      <img class="logo">
+      <img class="logo" src="assets/logo.png">
       <button class="nav-btns" id="file">File</button>
       <button class="nav-btns" id="edit">Edit</button>
       <button class="nav-btns" id="view">View</button>
@@ -21,7 +21,11 @@
     <div id="editor">
     </div>
   </body>
-  <footer class="statusbar"></footer>
+  <footer class="statusbar">
+    <button id="remote" class="sts-btn">&#xE8AF;</button>
+    <button id="git-sync" class="sts-btn">&#xE895;</button>
+    <button id="language" class="sts-btn">Language</button>
+  </footer>
   <script src="/ace-builds/src/ace.js" type="text/javascript" charset="utf-8"></script>
   <script type="module" src="/main.js" defer></script>
 </html>

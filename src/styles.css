@@ -11,7 +11,7 @@
 
 #editor { 
   position: absolute;
-  top: 35px;
+  top: 40px;
   right: 0;
   bottom: 25px;
   left: 0;
@@ -74,4 +74,33 @@
   display: inline-flex;
   height: 25px;
   z-index: 99;
+}
+
+#remote {
+  width: 40px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  font-family: SegoeIcons;
+  font-weight: lighter;
+  font-size: 10pt;
+}
+
+#git-sync {
+  width: 30px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  font-family: SegoeIcons;
+  font-weight: lighter;
+  font-size: 10pt;
+}
+
+#language {
+  width: auto;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  font-weight: lighter;
+  font-size: 10pt;
 }
