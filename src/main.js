@@ -1,7 +1,7 @@
-import { appWindow } from '@tauri-apps/api/window';
+/*import { appWindow } from '@tauri-apps/api/window';
 document.getElementById('titlebar-minimize').addEventListener('click', () => appWindow.minimize());
 document.getElementById('titlebar-maximize').addEventListener('click', () => appWindow.toggleMaximize());
-document.getElementById('titlebar-close').addEventListener('click', () => appWindow.close());
+document.getElementById('titlebar-close').addEventListener('click', () => appWindow.close());*/
 
 document.getElementById('titlebar-close').addEventListener('click', () => window.close());
 var editor = ace.edit("editor");
@@ -10,6 +10,7 @@ var iColumnPosition;
 var oPositionObject;
 var filename = "myfile.js";
 var lang = "";
+var coin = 0;
 editor.session.setOptions({ tabSize: 2, useSoftTabs: true });
 editor.setKeyboardHandler('ace/keyboard/vscode');
 
@@ -67,3 +68,14 @@ function autoImplementedMode(filename){
 var mode = autoImplementedMode(filename);
 editor.session.setMode(mode);
 document.getElementById('language').innerHTML = lang;
+
+document.getElementById('feedback').addEventListener('click', () => {
+  if (coin == 0) {
+    document.getElementById('editor').style.fontFamily = "Flow";
+    coin = 1;
+  }
+  else {
+    document.getElementById('editor').style.fontFamily = "monospace";
+    coin = 0;
+  }
+});

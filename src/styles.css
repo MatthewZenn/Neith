@@ -8,6 +8,11 @@
   src: url(assets/SegoeIcons.ttf);
 }
 
+@font-face {
+  font-family: Flow;
+  src: url(assets/FlowCircular-Regular.ttf);
+}
+
 ::-webkit-scrollbar{
   display: none;
 }
@@ -19,6 +24,11 @@
   bottom: 25px;
   left: 0;
   font-size: 12pt;
+  font-family: monospace;
+}
+
+#editor .ace_gutter {
+  font-family: monospace;
 }
 
 .titlebar {
