@@ -45,11 +45,11 @@ body, html {
 }
 
 .nav-btns:hover {
-  background-color: var(--ui-hover);
+  background: var(--ui-hover);
 }
 
 .statusbar {
-  background-color: var(--ui-background);
+  background: var(--ui-background);
 }
 
 .sts-btn {
@@ -62,7 +62,7 @@ body, html {
 }
 
 #editor .ace_gutter {
-  background: var(--ui-sec-background);
+  background: var(--ui-background);
   color: var(--secondary-text);
 }
 
@@ -71,7 +71,7 @@ body, html {
 }
 
 #editor {
-  background-color: var(--ui-sec-background);
+  background-color: var(--ui-background);
   color: var(--inactive-text);
 }
 
@@ -84,7 +84,7 @@ body, html {
 }
 
 #editor .ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0 var(--ui-sec-background);
+  box-shadow: 0 0 3px 0 var(--ui-background);
   border-radius: 2px;
 }
 

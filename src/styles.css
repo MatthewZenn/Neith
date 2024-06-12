@@ -8,10 +8,13 @@
   src: url(assets/SegoeIcons.ttf);
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
 
 #editor { 
   position: absolute;
-  top: 40px;
+  top: 70px;
   right: 0;
   bottom: 25px;
   left: 0;
@@ -71,12 +74,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: inline-flex;
+  display: block;
   height: 25px;
   z-index: 99;
 }
 
 #remote {
+  position: relative;
   width: 40px;
   height: 25px;
   border: none;
@@ -84,9 +88,11 @@
   font-family: SegoeIcons;
   font-weight: lighter;
   font-size: 10pt;
+  text-align: center;
 }
 
 #git-sync {
+  position: relative;
   width: 30px;
   height: 25px;
   border: none;
@@ -94,13 +100,52 @@
   font-family: SegoeIcons;
   font-weight: lighter;
   font-size: 10pt;
+  text-align: center;
 }
 
 #language {
+  position: relative;
   width: auto;
   height: 25px;
   border: none;
+  float: right;
   background-color: transparent;
   font-weight: lighter;
   font-size: 10pt;
+}
+
+#tabs {
+  position: relative;
+  width: auto;
+  height: 25px;
+  border: none;
+  float: right;
+  background-color: transparent;
+  font-weight: lighter;
+  font-size: 10pt;
+}
+
+#counter {
+  position: relative;
+  height: 25px;
+  width: auto;
+  border: none;
+  float: right;
+  background-color: transparent;
+  font-weight: lighter;
+  font-size: 10pt;
+  text-align: center;
+}
+
+#feedback {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  float: right;
+  border: none;
+  background-color: transparent;
+  font-family: SegoeIcons;
+  font-weight: lighter;
+  font-size: 10pt;
+  text-align: center;
 }
