@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="Themes/one_dark.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Neith</title>
   </head>
   <body>
@@ -14,10 +15,16 @@
       <button class="nav-btns" id="edit">Edit</button>
       <button class="nav-btns" id="view">View</button>
       <button class="nav-btns" id="term">Terminal</button>
+      <div id="breadcrumbs"></div>
       <button class="titlebar-button" id="titlebar-close">&#xE8BB;</button>
       <button class="titlebar-button" id="titlebar-maximize">&#xE923;</button>
       <button class="titlebar-button" id="titlebar-minimize">&#xE921;</button>
     </header>
+    <div id="table">
+      <button class="tab">index.html</button>
+      <button class="tab">main.js</button>
+      <button class="tab">one_dark.css</button>
+    </div>
     <div id="editor">
     </div>
   </body>
@@ -25,7 +32,7 @@
     <button id="remote" class="sts-btn">&#xE93E;</button>
     <button id="git-sync" class="sts-btn">&#xE895;</button>
     <button id="feedback" class="sts-btn">&#xE8E4;</button>
-    <button id="language" class="sts-btn">Language</button>
+    <button id="languages" class="sts-btn">Language</button>
     <button id="tabs" class="sts-btn">Spaces: 2</button>
     <button id="counter" class="sts-btn">Ln 0, Col 0</button>
   </footer>

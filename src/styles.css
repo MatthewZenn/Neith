@@ -113,7 +113,7 @@
   text-align: center;
 }
 
-#language {
+#languages {
   position: relative;
   width: auto;
   height: 25px;
@@ -158,4 +158,41 @@
   font-weight: lighter;
   font-size: 10pt;
   text-align: center;
+}
+
+#breadcrumbs {
+  position: fixed;
+  left: 50%;
+  height: 25px;
+  top: 5px;
+  width: 35%;
+  transform: translate(-50%, 0%);
+  border-radius: 5px;
+}
+
+.crumb {
+  height: 100%;
+  width: auto;
+  margin-right: 5px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+}
+
+#table {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  right: 0;
+  background: transparent;
+  height: 35px;
+  margin: 0;
+}
+
+.tab {
+  height: 100%;
+  width: 120px;
+  background-color: transparent;
+  margin: 0;
+  border: none;
 }

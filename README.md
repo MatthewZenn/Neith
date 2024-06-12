@@ -6,6 +6,7 @@ The web dev editor of the future.
 - [x] Theme support
 - [x] Line counter
 - [x] Language detection and mode setting
+- [ ] File manager
 - [ ] File opening, editing, and saving
 - [ ] File and folder creation
 - [ ] Terminal integration

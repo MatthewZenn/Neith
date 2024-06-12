@@ -57,6 +57,24 @@ body, html {
   background-color: transparent;
 }
 
+.crumb {
+  color: var(--ui-text);
+}
+
+.crumb:hover {
+  cursor: pointer;
+  background-color: var(--ui-hover);
+}
+
+.tab {
+  color: var(--ui-sec-text);
+}
+
+#breadcrumbs {
+  color: var(--inactive-text);
+  background-color: var(--ui-sec-background);
+}
+
 #remote {
   background-color: var(--ui-accent);
 }
