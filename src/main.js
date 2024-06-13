@@ -1,11 +1,11 @@
-/*import { appWindow } from '@tauri-apps/api/window';
+const { appWindow } = window.__TAURI__.window;
+const { fs } = window.__TAURI__.fs;
 document.getElementById('titlebar-minimize').addEventListener('click', () => appWindow.minimize());
 document.getElementById('titlebar-maximize').addEventListener('click', () => appWindow.toggleMaximize());
-document.getElementById('titlebar-close').addEventListener('click', () => appWindow.close());*/
+document.getElementById('titlebar-close').addEventListener('click', () => appWindow.close());
 
 colorize();
 
-document.getElementById('titlebar-close').addEventListener('click', () => window.close());
 var editor = ace.edit("editor");
 var iRowPosition;
 var iColumnPosition;
@@ -24,6 +24,17 @@ editor.session.selection.on('changeCursor', function(){
   iColumnPosition = editor.selection.getCursor().column;
   document.getElementById('counter').innerHTML = "Ln "+(iRowPosition+1)+", Col "+(iColumnPosition+1);
 });
+
+document.getElementById('newfile').addEventListener('click', () => {
+  createTab("Untitled.txt");
+});
+
+function createTab(tabName) {
+  var tab = document.createElement('button');
+  tab.setAttribute("class", "tab");
+  tab.innerHTML = tabName;
+  document.getElementById('table').appendChild(tab);
+}
 
 function autoImplementedMode(filename){
   var ext = filename.split('.').pop();
@@ -99,13 +110,6 @@ for (let i=0; i<path.length; i++) {
   document.getElementById('breadcrumbs').innerHTML += "/";
 }
 
-// for (let j=0; j<path.length; j++) {
-//   var tab = document.createElement('button');
-//   tab.setAttribute("class", "tab");
-//   tab.textContent = path[i];
-//   tab.getElementById('table').appendChild(tab);
-// }
-
 $(".tab").click( function() {
   document.querySelectorAll(".tab").forEach(el => {
     el.style.backgroundColor = "var(--ui-sec-background)";
@@ -121,16 +125,16 @@ $(".tab").click( function() {
   editor.session.setMode(mode);
   document.getElementById('languages').innerHTML = langu;
   
-  codeFetch(filename).then((result) => {
-    editor.session.setValue(result);
-  });
+  // codeFetch(filename).then((result) => {
+  //   editor.session.setValue(result);
+  // });
 });
 
-async function codeFetch(path) {
-  let response = await fetch(path);
-  let data = await response.text();
-  return data;
-}
+// async function codeFetch(path) {
+//   let response = await fetch(path);
+//   let data = await response.text();
+//   return data;
+// }
 
 function colorize() {
   var theScript = document.createElement("link");

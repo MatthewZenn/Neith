@@ -10,19 +10,39 @@
   <body>
     <header data-tauri-drag-region class="titlebar">
       <img class="logo" src="assets/logo.png">
-      <button class="nav-btns" id="file">File</button>
-      <button class="nav-btns" id="edit">Edit</button>
+      <div class="dropdown">
+        <button class="nav-btns" id="file">File</button>
+        <div class="drop-menu">
+          <button class="menu-btn">New</button>
+          <button class="menu-btn">Open</button>
+          <br>
+          <button class="menu-btn">Save As</button>
+          <button class="menu-btn">Save</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btns" id="edit">Edit</button>
+        <div class="drop-menu">
+          <button class="menu-btn">Undo</button>
+          <button class="menu-btn">Redo</button>
+          <br>
+          <button class="menu-btn">Cut</button>
+          <button class="menu-btn">Copy</button>
+          <button class="menu-btn">Paste</button>
+          <br>
+          <button class="menu-btn">Settings</button>
+        </div>
+      </div>
       <button class="nav-btns" id="view">View</button>
       <button class="nav-btns" id="term">Terminal</button>
+      <button class="creates" id="newfile">&#xE8A5;</button>
+      <button class="creates" id="newfolder">&#xE8F4;</button>
       <div id="breadcrumbs"></div>
       <button class="titlebar-button" id="titlebar-close">&#xE8BB;</button>
       <button class="titlebar-button" id="titlebar-maximize">&#xE923;</button>
       <button class="titlebar-button" id="titlebar-minimize">&#xE921;</button>
     </header>
     <div id="table">
-      <button class="tab">index.html</button>
-      <button class="tab">main.js</button>
-      <button class="tab">styles.css</button>
     </div>
     <div id="editor">
     </div>

@@ -22,6 +22,7 @@
   --cursor: #528bff;
   --selection: rgba(49, 155, 255, 0.5);
   --selected-border: #3d4350;
+  --shadow: rgba(32, 33, 36, 0.5);
 }
 
 body, html {
@@ -48,6 +49,14 @@ body, html {
   background: var(--ui-hover);
 }
 
+.creates {
+  color: var(--ui-sec-text);
+}
+
+.creates:hover {
+  background: var(--ui-hover);
+}
+
 .statusbar {
   background: var(--ui-background);
 }
@@ -68,6 +77,20 @@ body, html {
 
 .tab {
   color: var(--ui-sec-text);
+}
+
+.drop-menu {
+  background-color: var(--ui-background);
+  box-shadow: 0 0 10px var(--shadow);
+}
+
+.menu-btn {
+  color: var(--inactive-text);
+}
+
+.menu-btn:hover {
+  background-color: var(--ui-accent);
+  color: var(--ui-text);
 }
 
 #breadcrumbs {
