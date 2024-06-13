@@ -110,7 +110,7 @@ for (let i=0; i<path.length; i++) {
   document.getElementById('breadcrumbs').innerHTML += "/";
 }
 
-$(".tab").click( function() {
+$(".tab").on('click', function() {
   document.querySelectorAll(".tab").forEach(el => {
     el.style.backgroundColor = "var(--ui-sec-background)";
     el.style.borderTop = "none";
@@ -125,16 +125,8 @@ $(".tab").click( function() {
   editor.session.setMode(mode);
   document.getElementById('languages').innerHTML = langu;
   
-  // codeFetch(filename).then((result) => {
-  //   editor.session.setValue(result);
-  // });
+  // Code for loading the file associated with the tab
 });
-
-// async function codeFetch(path) {
-//   let response = await fetch(path);
-//   let data = await response.text();
-//   return data;
-// }
 
 function colorize() {
   var theScript = document.createElement("link");
