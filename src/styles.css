@@ -168,6 +168,7 @@
   width: 35%;
   transform: translate(-50%, 0%);
   border-radius: 5px;
+  display: block;
 }
 
 .crumb {

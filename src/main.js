@@ -3,6 +3,8 @@ document.getElementById('titlebar-minimize').addEventListener('click', () => app
 document.getElementById('titlebar-maximize').addEventListener('click', () => appWindow.toggleMaximize());
 document.getElementById('titlebar-close').addEventListener('click', () => appWindow.close());*/
 
+colorize();
+
 document.getElementById('titlebar-close').addEventListener('click', () => window.close());
 var editor = ace.edit("editor");
 var iRowPosition;
@@ -11,7 +13,7 @@ var oPositionObject;
 var filename = "myfile.py";
 var langu = "";
 var coin = 0;
-var path = ['C:', 'User', 'AppData', 'Code'];
+var path = ['D:', 'spygu', 'Documents', 'Github', 'Neith'];
 
 editor.session.setOptions({ tabSize: 2, useSoftTabs: true });
 editor.setKeyboardHandler('ace/keyboard/vscode');
@@ -66,6 +68,9 @@ function autoImplementedMode(filename){
     case "css":
       langu = "CSS";
       return prefix + "css";
+    case "txt":
+      langu = "Plaintext"
+      mode = prefix + "text";
   }
 }
 
@@ -76,10 +81,12 @@ document.getElementById('languages').innerHTML = langu;
 document.getElementById('feedback').addEventListener('click', () => {
   if (coin == 0) {
     document.getElementById('editor').style.fontFamily = "Flow";
+    document.getElementById('breadcrumbs').style.display = "none";
     coin = 1;
   }
   else {
     document.getElementById('editor').style.fontFamily = "monospace";
+    document.getElementById('breadcrumbs').style.display = "block";
     coin = 0;
   }
 });
@@ -102,9 +109,11 @@ for (let i=0; i<path.length; i++) {
 $(".tab").click( function() {
   document.querySelectorAll(".tab").forEach(el => {
     el.style.backgroundColor = "var(--ui-sec-background)";
+    el.style.borderTop = "none";
     el.style.color = "var(--ui-sec-text)";
   });
   this.style.backgroundColor = "var(--ui-background)";
+  this.style.borderTop = "1px solid var(--ui-accent)";
   this.style.color = "var(--ui-text)";
   filename = this.innerHTML;
 
@@ -112,7 +121,7 @@ $(".tab").click( function() {
   editor.session.setMode(mode);
   document.getElementById('languages').innerHTML = langu;
   
-  codeFetch('Themes/'+filename).then((result) => {
+  codeFetch(filename).then((result) => {
     editor.session.setValue(result);
   });
 });
@@ -121,4 +130,11 @@ async function codeFetch(path) {
   let response = await fetch(path);
   let data = await response.text();
   return data;
+}
+
+function colorize() {
+  var theScript = document.createElement("link");
+  theScript.setAttribute("rel","stylesheet");
+  theScript.setAttribute("href","Themes/one_dark.css");
+  document.getElementsByTagName("head")[0].appendChild(theScript);
 }
