@@ -29,6 +29,10 @@ document.getElementById('newfile').addEventListener('click', () => {
   createTab("Untitled.txt");
 });
 
+document.getElementById('new').addEventListener('click', () => {
+  createTab("Untitled.txt");
+});
+
 function createTab(tabName) {
   var tab = document.createElement('button');
   tab.setAttribute("class", "tab");
