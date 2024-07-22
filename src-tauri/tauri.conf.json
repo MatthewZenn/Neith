@@ -48,7 +48,8 @@
         "title": "Neith",
         "width": 1280,
         "height": 720,
-        "decorations": false
+        "decorations": false,
+        "transparent": true
       }
     ],
     "security": {

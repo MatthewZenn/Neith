@@ -13,7 +13,7 @@ var oPositionObject;
 var filename = "myfile.py";
 var langu = "";
 var coin = 0;
-var path = ['D:', 'spygu', 'Documents', 'Github', 'Neith'];
+var path = [];
 
 editor.session.setOptions({ tabSize: 2, useSoftTabs: true });
 editor.setKeyboardHandler('ace/keyboard/vscode');
